@@ -1,0 +1,11 @@
+Plane 0: 49028
+Plane 1: 22228
+Plane 2: 16832
+Plane 3: 12032
+Plane 4: 11768
+Plane 5: 4979
+Plane 6: 1437
+Plane 7: 4983
+Plane 8: 2843
+Plane 9: 4400
+Plane 10: 3889
