@@ -3,6 +3,10 @@ import os
 import itertools
 from sets import Set
 import matplotlib.pyplot as plt
+import numpy as np
+import matplotlib.patches as patches
+import matplotlib.path as mplPath
+import random
 
 # These are the "Tableau 20" colors as RGB.
 tableau20 = [(31, 119, 180), (174, 199, 232), (255, 127, 14), (255, 187, 120),
@@ -23,10 +27,15 @@ plt.figure(figsize=(12, 14))
 
 # Remove the plot frame lines. They are unnecessary chartjunk.
 ax = plt.subplot(111)
+ax.set_xlim(0,10)
+ax.set_ylim(0,10)
 ax.spines["top"].set_visible(False)
 ax.spines["bottom"].set_visible(False)
 ax.spines["right"].set_visible(False)
 ax.spines["left"].set_visible(False)
+ax.get_xaxis().set_visible(False)
+ax.get_yaxis().set_visible(False)
+ax.set_aspect('equal', adjustable='box')
 
 
 path = os.getcwd()
@@ -72,25 +81,37 @@ for line in f:
     v = [float(i) for i in v]
     # for i in v:
     #     print(i)
-    plt.plot([ v[0], v[0]+v[2], v[0]+v[2], v[0], v[0] ],[ v[1], v[1], v[1]+v[2], v[1]+v[2], v[1] ], color=tableau20[0])
+    zo = 2
+    i = 0
+    a = 1;
+    if(v[-1] > 1):
+        i = 1
+        zo = 0
+        a = 0.5
+    elif(v[-1] == 1):
+        i = 10
+        zo = 1
+    plt.plot([ v[0], v[0]+v[2], v[0]+v[2], v[0], v[0] ],[ v[1], v[1], v[1]+v[2], v[1]+v[2], v[1] ], color=tableau20[i], zorder=zo, alpha = a)
 
 for x, y in zip(Polygonx, Polygony):
     plt.plot(x,y,color=tableau20[6])
 
+plt.savefig(path + 'quad2.png', transparent=True, bbox_inches='tight')
+# plt.show()
 
 
-plt.ylabel('some numbers')
-plt.show()
-
-
-plt.figure(figsize=(12, 14))
-
+plt.figure(figsize=(12, 12))
 # Remove the plot frame lines. They are unnecessary chartjunk.
 ax = plt.subplot(111)
+ax.set_xlim(0,10)
+ax.set_ylim(0,10)
 ax.spines["top"].set_visible(False)
 ax.spines["bottom"].set_visible(False)
 ax.spines["right"].set_visible(False)
 ax.spines["left"].set_visible(False)
+ax.get_xaxis().set_visible(False)
+ax.get_yaxis().set_visible(False)
+ax.set_aspect('equal', adjustable='box')
 
 triangles = open(path + "triangles" + ".txt", 'r')
 
@@ -116,7 +137,47 @@ for vert in Trianglesvert:
     for v in vert:
         tmpx.append( Trianglesx[v]  )
         tmpy.append( Trianglesy[v]  )
-    plt.plot(tmpx,tmpy, color = tableau20[10])
+    plt.plot(tmpx,tmpy, color = tableau20[0])
 
 # plt.scatter(Trianglesx, Trianglesy)
+plt.savefig(path + 'quad3.png', transparent=True, bbox_inches='tight')
+# plt.show()
+
+
+fig = plt.figure(figsize=(12, 12))
+ax = fig.add_subplot(111)
+paths = []
+
+for (polx,poly) in zip(Polygonx,Polygony):
+    bbPath = mplPath.Path( np.array( zip(polx, poly) ) )
+    patch = patches.PathPatch(bbPath, edgecolor=tableau20[6], fill=False, lw=3)
+    paths.append(bbPath)
+    ax.add_patch(patch)
+
+rangeX = (0, 10)
+rangeY = (0, 10)
+pointx = []
+pointy = []
+count = 0
+while count < 2000:
+    x = random.uniform(0.01, 9.99)
+    y = random.uniform(0.01, 9.99)
+    if(paths[0].contains_point((x,y))):
+        print("hmmm")
+        if not( paths[1].contains_point((x,y))):
+            pointx.append(x)
+            pointy.append(y)
+            count += 1
+
+plt.plot(pointx, pointy, "o", markeredgecolor=tableau20[10], alpha=1, ms = 2)
+
+ax.set_xlim(0,10)
+ax.set_ylim(0,10)
+ax.spines["top"].set_visible(False)
+ax.spines["bottom"].set_visible(False)
+ax.spines["right"].set_visible(False)
+ax.spines["left"].set_visible(False)
+ax.get_xaxis().set_visible(False)
+ax.get_yaxis().set_visible(False)
+plt.savefig(path + 'quad1.png', transparent=True, bbox_inches='tight')
 plt.show()

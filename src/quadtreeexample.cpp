@@ -11,7 +11,7 @@ using namespace QTD;
 
 void saveTriangles(std::vector<std::vector<int>> vert, std::vector<quadPoint> points){
     ofstream myfile;
-    myfile.open ("/home/unnar/catkin_ws/src/quad_tree_decimation_examples/data/quadTreeTest/triangles.txt");
+    myfile.open ("/home/unnar/catkin_ws/src/quadtree_example/data/quadTreeTest/triangles.txt");
 
     myfile << "# Points" << std::endl;
     for(auto p : points){
@@ -27,7 +27,7 @@ void saveTriangles(std::vector<std::vector<int>> vert, std::vector<quadPoint> po
 
 void saveQuad(std::vector<QuadTree::Cell> cells, string name){
     ofstream myfile;
-    myfile.open ("/home/unnar/catkin_ws/src/quad_tree_decimation_examples/data/quadTreeTest/" + name);
+    myfile.open ("/home/unnar/catkin_ws/src/quadtree_example/data/quadTreeTest/" + name);
     for(auto cell : cells){
         myfile << std::to_string(cell.x) << ",";
         myfile << std::to_string(cell.y) << ",";
@@ -42,7 +42,7 @@ void saveQuad(std::vector<QuadTree::Cell> cells, string name){
 
 void savePolygon(std::vector<QTD::quadPoint> qtd_boundary, std::vector<int> polygonstartIdx){
     ofstream myfile;
-    myfile.open ("/home/unnar/catkin_ws/src/quad_tree_decimation_examples/data/quadTreeTest/polygon.txt");
+    myfile.open ("/home/unnar/catkin_ws/src/quadtree_example/data/quadTreeTest/polygon.txt");
     for(auto n : polygonstartIdx){
         myfile << std::to_string(n);
         std::cout << n << std::endl;
