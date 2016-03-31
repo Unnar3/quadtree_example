@@ -54,6 +54,9 @@ target_link_libraries(qtde_snapshotMesh ${catkin_LIBRARIES} ${QT_LIBRARIES} comp
 add_executable(qtde_quadTreeTest src/quadtreeexample.cpp)
 target_link_libraries(qtde_quadTreeTest ${catkin_LIBRARIES} ${QT_LIBRARIES})
 
+add_executable(qtde_makeWhiteVersion src/makeWhiteVersion.cpp)
+target_link_libraries(qtde_makeWhiteVersion ${catkin_LIBRARIES} ${QT_LIBRARIES})
+
 add_executable(qtde_fusionMesh src/fusionMesh.cpp)
 target_link_libraries(qtde_fusionMesh ${catkin_LIBRARIES} ${QT_LIBRARIES} compression)
 
