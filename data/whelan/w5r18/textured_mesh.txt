@@ -1,0 +1,43 @@
+/home/unnar/catkin_ws/src/quadtree_example/data/whelan/w5r18//textured_mesh.obj
+Number of lines: 211000
+Number of vertices 24374
+Number of Texture vertices 139890
+
+Unique points: 24374
+Number of faces 46630
+Number of normals 0
+Planes:
+Plane 1:  1168
+Plane 2:  959
+Plane 3:  913
+Plane 4:  694
+Plane 5:  631
+Plane 6:  853
+Plane 7:  858
+Plane 8:  427
+Plane 9:  1216
+Plane 10:  798
+Plane 11:  722
+Plane 12:  819
+Plane 13:  720
+Plane 14:  760
+Plane 15:  792
+Plane 16:  674
+Plane 17:  585
+Plane 18:  653
+Plane 19:  681
+Plane 20:  849
+Plane 21:  677
+Plane 22:  638
+Plane 23:  724
+Plane 24:  707
+Plane 25:  747
+Plane 26:  636
+Plane 27:  619
+Plane 28:  858
+Plane 29:  500
+Plane 30:  394
+Plane 31:  418
+Plane 32:  604
+Plane 33:  652
+Summed unique points:  23946

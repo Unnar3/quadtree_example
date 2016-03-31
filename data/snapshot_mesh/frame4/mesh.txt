@@ -1,0 +1,17 @@
+/home/unnar/catkin_ws/src/quadtree_example/data/snapshot_mesh/frame4/mesh.obj
+Number of lines: 90939
+Number of vertices 36006
+Number of Texture vertices 36006
+
+Unique points: 13212
+Number of faces 18880
+Number of normals 10
+Planes:
+Plane 1:  4321
+Plane 2:  2718
+Plane 3:  1071
+Plane 4:  1389
+Plane 5:  1006
+Plane 6:  1509
+Plane 7:  1198
+Summed unique points:  13212

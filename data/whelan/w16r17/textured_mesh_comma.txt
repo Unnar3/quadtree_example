@@ -1,0 +1,69 @@
+/home/unnar/catkin_ws/src/quadtree_example/data/whelan/w16r17//textured_mesh_comma.obj
+Number of lines: 343912
+Number of vertices 39516
+Number of Texture vertices 228159
+
+Unique points: 39516
+Number of faces 76053
+Number of normals 0
+Planes:
+Plane 1:  816
+Plane 2:  767
+Plane 3:  631
+Plane 4:  595
+Plane 5:  903
+Plane 6:  745
+Plane 7:  797
+Plane 8:  644
+Plane 9:  432
+Plane 10:  652
+Plane 11:  784
+Plane 12:  570
+Plane 13:  712
+Plane 14:  923
+Plane 15:  558
+Plane 16:  345
+Plane 17:  714
+Plane 18:  749
+Plane 19:  653
+Plane 20:  297
+Plane 21:  700
+Plane 22:  629
+Plane 23:  677
+Plane 24:  536
+Plane 25:  1007
+Plane 26:  784
+Plane 27:  435
+Plane 28:  977
+Plane 29:  525
+Plane 30:  650
+Plane 31:  654
+Plane 32:  786
+Plane 33:  894
+Plane 34:  868
+Plane 35:  608
+Plane 36:  271
+Plane 37:  322
+Plane 38:  549
+Plane 39:  726
+Plane 40:  581
+Plane 41:  455
+Plane 42:  570
+Plane 43:  510
+Plane 44:  462
+Plane 45:  765
+Plane 46:  935
+Plane 47:  875
+Plane 48:  941
+Plane 49:  869
+Plane 50:  531
+Plane 51:  685
+Plane 52:  663
+Plane 53:  683
+Plane 54:  585
+Plane 55:  672
+Plane 56:  727
+Plane 57:  459
+Plane 58:  619
+Plane 59:  431
+Summed unique points:  38903

@@ -1,0 +1,35 @@
+/home/unnar/catkin_ws/src/quadtree_example/data/dataset_fusion/w5r16//mesh.obj
+Number of lines: 141090
+Number of vertices 56267
+Number of Texture vertices 56267
+
+Unique points: 20886
+Number of faces 28441
+Number of normals 27
+Planes:
+Plane 1:  3671
+Plane 2:  2555
+Plane 3:  1402
+Plane 4:  903
+Plane 5:  1516
+Plane 6:  2165
+Plane 7:  706
+Plane 8:  469
+Plane 9:  945
+Plane 10:  338
+Plane 11:  497
+Plane 12:  365
+Plane 13:  246
+Plane 14:  333
+Plane 15:  654
+Plane 16:  829
+Plane 17:  381
+Plane 18:  729
+Plane 19:  382
+Plane 20:  403
+Plane 21:  257
+Plane 22:  278
+Plane 23:  253
+Plane 24:  415
+Plane 25:  194
+Summed unique points:  20886

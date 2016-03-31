@@ -1,0 +1,28 @@
+/home/unnar/catkin_ws/src/quadtree_example/data/dataset_mesh/w5r16/Lower-Efficient/mesh.obj
+Number of lines: 71311
+Number of vertices 27759
+Number of Texture vertices 27759
+
+Unique points: 10912
+Number of faces 15694
+Number of normals 23
+Planes:
+Plane 1:  2155
+Plane 2:  691
+Plane 3:  452
+Plane 4:  1251
+Plane 5:  665
+Plane 6:  477
+Plane 7:  217
+Plane 8:  118
+Plane 9:  1061
+Plane 10:  83
+Plane 11:  1922
+Plane 12:  481
+Plane 13:  147
+Plane 14:  179
+Plane 15:  506
+Plane 16:  153
+Plane 17:  155
+Plane 18:  197
+Summed unique points:  10910

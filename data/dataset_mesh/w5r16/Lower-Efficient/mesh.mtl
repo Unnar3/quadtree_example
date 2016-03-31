@@ -8,7 +8,7 @@ Ks 1.0 1.0 1.0
 d 1
 Ns 1
 illum 2
-map_Kd /home/unnar/catkin_ws/src/quad_tree_decimation_examples/data/dataset_mesh/w5r16/Lower-Efficient/texture_0.png
+map_Kd  texture_0.png
 ###
 newmtl material_1
 Ka 0.2 0.2 0.2
@@ -17,7 +17,7 @@ Ks 1.0 1.0 1.0
 d 1
 Ns 1
 illum 2
-map_Kd /home/unnar/catkin_ws/src/quad_tree_decimation_examples/data/dataset_mesh/w5r16/Lower-Efficient/texture_1.png
+map_Kd  texture_1.png
 ###
 newmtl material_2
 Ka 0.2 0.2 0.2
@@ -26,7 +26,7 @@ Ks 1.0 1.0 1.0
 d 1
 Ns 1
 illum 2
-map_Kd /home/unnar/catkin_ws/src/quad_tree_decimation_examples/data/dataset_mesh/w5r16/Lower-Efficient/texture_2.png
+map_Kd  texture_2.png
 ###
 newmtl material_3
 Ka 0.2 0.2 0.2
@@ -35,7 +35,7 @@ Ks 1.0 1.0 1.0
 d 1
 Ns 1
 illum 2
-map_Kd /home/unnar/catkin_ws/src/quad_tree_decimation_examples/data/dataset_mesh/w5r16/Lower-Efficient/texture_3.png
+map_Kd  texture_3.png
 ###
 newmtl material_4
 Ka 0.2 0.2 0.2
@@ -44,7 +44,7 @@ Ks 1.0 1.0 1.0
 d 1
 Ns 1
 illum 2
-map_Kd /home/unnar/catkin_ws/src/quad_tree_decimation_examples/data/dataset_mesh/w5r16/Lower-Efficient/texture_4.png
+map_Kd  texture_4.png
 ###
 newmtl material_5
 Ka 0.2 0.2 0.2
@@ -53,7 +53,7 @@ Ks 1.0 1.0 1.0
 d 1
 Ns 1
 illum 2
-map_Kd /home/unnar/catkin_ws/src/quad_tree_decimation_examples/data/dataset_mesh/w5r16/Lower-Efficient/texture_5.png
+map_Kd  texture_5.png
 ###
 newmtl material_6
 Ka 0.2 0.2 0.2
@@ -62,7 +62,7 @@ Ks 1.0 1.0 1.0
 d 1
 Ns 1
 illum 2
-map_Kd /home/unnar/catkin_ws/src/quad_tree_decimation_examples/data/dataset_mesh/w5r16/Lower-Efficient/texture_6.png
+map_Kd  texture_6.png
 ###
 newmtl material_7
 Ka 0.2 0.2 0.2
@@ -71,7 +71,7 @@ Ks 1.0 1.0 1.0
 d 1
 Ns 1
 illum 2
-map_Kd /home/unnar/catkin_ws/src/quad_tree_decimation_examples/data/dataset_mesh/w5r16/Lower-Efficient/texture_7.png
+map_Kd  texture_7.png
 ###
 newmtl material_8
 Ka 0.2 0.2 0.2
@@ -80,7 +80,7 @@ Ks 1.0 1.0 1.0
 d 1
 Ns 1
 illum 2
-map_Kd /home/unnar/catkin_ws/src/quad_tree_decimation_examples/data/dataset_mesh/w5r16/Lower-Efficient/texture_8.png
+map_Kd  texture_8.png
 ###
 newmtl material_9
 Ka 0.2 0.2 0.2
@@ -89,7 +89,7 @@ Ks 1.0 1.0 1.0
 d 1
 Ns 1
 illum 2
-map_Kd /home/unnar/catkin_ws/src/quad_tree_decimation_examples/data/dataset_mesh/w5r16/Lower-Efficient/texture_9.png
+map_Kd  texture_9.png
 ###
 newmtl material_10
 Ka 0.2 0.2 0.2
@@ -98,7 +98,7 @@ Ks 1.0 1.0 1.0
 d 1
 Ns 1
 illum 2
-map_Kd /home/unnar/catkin_ws/src/quad_tree_decimation_examples/data/dataset_mesh/w5r16/Lower-Efficient/texture_10.png
+map_Kd  texture_10.png
 ###
 newmtl material_11
 Ka 0.2 0.2 0.2
@@ -107,7 +107,7 @@ Ks 1.0 1.0 1.0
 d 1
 Ns 1
 illum 2
-map_Kd /home/unnar/catkin_ws/src/quad_tree_decimation_examples/data/dataset_mesh/w5r16/Lower-Efficient/texture_11.png
+map_Kd  texture_11.png
 ###
 newmtl material_12
 Ka 0.2 0.2 0.2
@@ -116,7 +116,7 @@ Ks 1.0 1.0 1.0
 d 1
 Ns 1
 illum 2
-map_Kd /home/unnar/catkin_ws/src/quad_tree_decimation_examples/data/dataset_mesh/w5r16/Lower-Efficient/texture_12.png
+map_Kd  texture_12.png
 ###
 newmtl material_13
 Ka 0.2 0.2 0.2
@@ -125,7 +125,7 @@ Ks 1.0 1.0 1.0
 d 1
 Ns 1
 illum 2
-map_Kd /home/unnar/catkin_ws/src/quad_tree_decimation_examples/data/dataset_mesh/w5r16/Lower-Efficient/texture_13.png
+map_Kd  texture_13.png
 ###
 newmtl material_14
 Ka 0.2 0.2 0.2
@@ -134,7 +134,7 @@ Ks 1.0 1.0 1.0
 d 1
 Ns 1
 illum 2
-map_Kd /home/unnar/catkin_ws/src/quad_tree_decimation_examples/data/dataset_mesh/w5r16/Lower-Efficient/texture_14.png
+map_Kd  texture_14.png
 ###
 newmtl material_15
 Ka 0.2 0.2 0.2
@@ -143,7 +143,7 @@ Ks 1.0 1.0 1.0
 d 1
 Ns 1
 illum 2
-map_Kd /home/unnar/catkin_ws/src/quad_tree_decimation_examples/data/dataset_mesh/w5r16/Lower-Efficient/texture_15.png
+map_Kd  texture_15.png
 ###
 newmtl material_16
 Ka 0.2 0.2 0.2
@@ -152,7 +152,7 @@ Ks 1.0 1.0 1.0
 d 1
 Ns 1
 illum 2
-map_Kd /home/unnar/catkin_ws/src/quad_tree_decimation_examples/data/dataset_mesh/w5r16/Lower-Efficient/texture_16.png
+map_Kd  texture_16.png
 ###
 newmtl material_17
 Ka 0.2 0.2 0.2
@@ -161,7 +161,7 @@ Ks 1.0 1.0 1.0
 d 1
 Ns 1
 illum 2
-map_Kd /home/unnar/catkin_ws/src/quad_tree_decimation_examples/data/dataset_mesh/w5r16/Lower-Efficient/texture_17.png
+map_Kd  texture_17.png
 ###
 newmtl material_18
 Ka 0.2 0.2 0.2
@@ -170,7 +170,7 @@ Ks 1.0 1.0 1.0
 d 1
 Ns 1
 illum 2
-map_Kd /home/unnar/catkin_ws/src/quad_tree_decimation_examples/data/dataset_mesh/w5r16/Lower-Efficient/texture_18.png
+map_Kd  texture_18.png
 ###
 newmtl material_19
 Ka 0.2 0.2 0.2
@@ -179,7 +179,7 @@ Ks 1.0 1.0 1.0
 d 1
 Ns 1
 illum 2
-map_Kd /home/unnar/catkin_ws/src/quad_tree_decimation_examples/data/dataset_mesh/w5r16/Lower-Efficient/texture_19.png
+map_Kd  texture_19.png
 ###
 newmtl material_20
 Ka 0.2 0.2 0.2
@@ -188,7 +188,7 @@ Ks 1.0 1.0 1.0
 d 1
 Ns 1
 illum 2
-map_Kd /home/unnar/catkin_ws/src/quad_tree_decimation_examples/data/dataset_mesh/w5r16/Lower-Efficient/texture_20.png
+map_Kd  texture_20.png
 ###
 newmtl material_21
 Ka 0.2 0.2 0.2
@@ -197,7 +197,7 @@ Ks 1.0 1.0 1.0
 d 1
 Ns 1
 illum 2
-map_Kd /home/unnar/catkin_ws/src/quad_tree_decimation_examples/data/dataset_mesh/w5r16/Lower-Efficient/texture_21.png
+map_Kd  texture_21.png
 ###
 newmtl material_22
 Ka 0.2 0.2 0.2
@@ -206,5 +206,5 @@ Ks 1.0 1.0 1.0
 d 1
 Ns 1
 illum 2
-map_Kd /home/unnar/catkin_ws/src/quad_tree_decimation_examples/data/dataset_mesh/w5r16/Lower-Efficient/texture_22.png
+map_Kd  texture_22.png
 ###

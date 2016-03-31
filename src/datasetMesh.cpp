@@ -136,7 +136,7 @@ public:
                 pt.x = p.x;
                 pt.y = p.y;
                 pt.z = p.z;
-                pt.r = (p.rgba >> 16) & 0x0000ff  ;
+                pt.r = (p.rgba >> 16) & 0x0000ff;
                 pt.g = (p.rgba >> 8)  & 0x0000ff;
                 pt.b = (p.rgba)       & 0x0000ff;
                 pn.normal_x = p.normal_x;

@@ -1,0 +1,21 @@
+/home/unnar/catkin_ws/src/quadtree_example/data/test_cloud_mesh/mesh.obj
+Number of lines: 26854
+Number of vertices 10723
+Number of Texture vertices 10723
+
+Unique points: 3710
+Number of faces 5353
+Number of normals 12
+Planes:
+Plane 1:  923
+Plane 2:  758
+Plane 3:  895
+Plane 4:  157
+Plane 5:  155
+Plane 6:  208
+Plane 7:  124
+Plane 8:  121
+Plane 9:  139
+Plane 10:  115
+Plane 11:  115
+Summed unique points:  3710
