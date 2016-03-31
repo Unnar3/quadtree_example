@@ -1,25 +1,26 @@
 {
 
 dataset_path            : /home/unnar/catkin_ws/src/quad_tree_decimation_examples/data/dataset_mesh/,
-dataset_cloud           : w5r16/Lower/surfel_map.pcd,
+# dataset_cloud           : w16r17/surfel_map.pcd,
+# dataset_cloud           : w5r16/Lower2/surfel_map.pcd,
+dataset_cloud           : w12r17/surfel_map.pcd,
 
 
 # Compression class params
 VoxelLeafSize           : 0.2, # Cannot be smaller than SVVoxelResolution
 RWHullMaxDist           : 0.1,
-hullAlpha               : 0.2,
+hullAlpha               : 0.06,
 
 
 # dataset Mesh
 disjoinedSet            : 10,
 octree_res              : 1.0,
 normal_neigbourhood     : 0.1,
-inlier_threshold        : 0.2,
-inlier_min              : 40000,
-min_shape               : 40000,
-angle_threshold         : 0.9,
+inlier_threshold        : 0.1,
+inlier_min              : 250,
+min_shape               : 250,
+angle_threshold         : 0.1,
 add_threshold           : 0.1,
 connectedness_res       : 0.1,
 distance_threshold      : 0.0,
-
 }

@@ -48,6 +48,12 @@ target_link_libraries(qtde_holeCheck ${catkin_LIBRARIES})
 add_executable(qtde_datasetMesh src/datasetMesh.cpp)
 target_link_libraries(qtde_datasetMesh ${catkin_LIBRARIES} ${QT_LIBRARIES} compression)
 
+add_executable(qtde_snapshotMesh src/snapshotMesh.cpp)
+target_link_libraries(qtde_snapshotMesh ${catkin_LIBRARIES} ${QT_LIBRARIES} compression)
+
+add_executable(qtde_quadTreeTest src/quadtreeexample.cpp)
+target_link_libraries(qtde_quadTreeTest ${catkin_LIBRARIES} ${QT_LIBRARIES})
+
 add_executable(qtde_fusionMesh src/fusionMesh.cpp)
 target_link_libraries(qtde_fusionMesh ${catkin_LIBRARIES} ${QT_LIBRARIES} compression)
 

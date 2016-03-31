@@ -1,1 +1,1 @@
-# quadtree_example
+# quad_tree_decimation_examples

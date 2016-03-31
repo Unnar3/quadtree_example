@@ -147,6 +147,10 @@ public:
             }
         }
 
+        pcl::PCDWriter writer;
+        writer.write(save_path + "threshholded.pcd", *segment);
+        // exit(0);
+
 
         ////////////////////////////////////////////////////////////////////////
         // EFFICIENT RANSAC with PPR
@@ -164,28 +168,53 @@ public:
         while(true){
             std::vector<PointCloudT::Ptr> plane_vec_tmp;
             std::vector<pcl::ModelCoefficients::Ptr> normal_vec_tmp;
-
-            planeEx.planeSegmentationEfficient(segment, normals, plane_vec_tmp, normal_vec_tmp, nonPlanar);
+            std::cout << "HMMM1" << std::endl;
+            planeEx.planeSegmentationEfficientPPR(segment, normals, plane_vec_tmp, normal_vec_tmp, nonPlanar);
 
             std::cout << "size: " << plane_vec_tmp.size() << std::endl;
 
-            if(plane_vec_tmp.size() < 2) break;
             plane_vec.insert(plane_vec.end(), plane_vec_tmp.begin(), plane_vec_tmp.end());
             normal_vec.insert(normal_vec.end(), normal_vec_tmp.begin(), normal_vec_tmp.end());
             *segment = *nonPlanar;
+            if(plane_vec_tmp.size() < 2) break;
 
             params.angle_threshold = params.angle_threshold + params.angle_threshold/2.0;
             params.inlier_min = params.inlier_min * 2.0;
             params.min_shape = params.inlier_min;
             planeEx.setPrimitiveParameters(params);
-            break;
+            // break;
         }
-        // PROJECT TO PLANE
-
 
         planeEx.projectToPlane<PointT>( plane_vec, normal_vec );
+        std::cout << "ha" << std::endl;
         planeEx.mergePlanes<PointT>( plane_vec, normal_vec );
+        std::cout << "ho" << std::endl;
         planeEx.projectToPlane<PointT>( plane_vec, normal_vec );
+        std::cout << "hi" << std::endl;
+
+        PointCloudT::Ptr outCloudEfficientPPR( new PointCloudT() );
+        planeEx.combinePlanes(plane_vec, outCloudEfficientPPR, true);
+
+        PointCloudT::Ptr outCloudEfficientPPRnc( new PointCloudT() );
+        planeEx.combinePlanes(plane_vec, outCloudEfficientPPRnc, false);
+
+        ofstream myfile;
+        myfile.open (save_path + "segmented.txt");
+        int n = 0;
+        for(auto plane: plane_vec){
+            myfile << "Plane " + std::to_string(n) + ": " + std::to_string(plane->size()) << std::endl;
+            n++;
+        }
+        myfile.close();
+
+
+        writer.write(save_path + "segmented.pcd", *outCloudEfficientPPR);
+        writer.write(save_path + "segmented_nc.pcd", *outCloudEfficientPPRnc);
+
+
+        // PROJECT TO PLANE
+        std::cout << "hmmm" << std::endl;
+
 
 
         // EXX::compression cmprs;
@@ -206,16 +235,17 @@ public:
         // std::vector<PointCloudT::Ptr> simplified_hulls;
         // cmprs.reumannWitkamLineSimplification( &hulls, &simplified_hulls, dDesc);
 
-        pcl::PCDWriter writer;
 
-        for(int i = 0; i < hulls.size(); ++i){
-            for(int j = 0; j < hulls[i]->points.size(); ++j){
-                hulls[i]->at(j).r = 255;
-                hulls[i]->at(j).g = 255;
-                hulls[i]->at(j).b = (int)((float)j/(float)hulls[i]->points.size()*(float)255);
-            }
-            writer.write(save_path + "/hulls/hull_" + std::to_string(i) +  ".pcd", *hulls[i]);
-        }
+
+        // for(int i = 0; i < hulls.size(); ++i){
+        //     for(int j = 0; j < hulls[i]->points.size(); ++j){
+        //         hulls[i]->at(j).r = 255;
+        //         hulls[i]->at(j).g = 255;
+        //         hulls[i]->at(j).b = (int)((float)j/(float)hulls[i]->points.size()*(float)255);
+        //     }
+        //     std::cout << "hull size: " << hulls[i]->size() << std::endl;
+        //     writer.write(save_path + "/hulls/hull_" + std::to_string(i) +  ".pcd", *hulls[i]);
+        // }
 
         // for(auto &c : hulls){
         //     int k = 0;
@@ -228,11 +258,12 @@ public:
         //     writer.write(save_path + "/hulls/hull_" + std::to_string(j) +  ".pcd", *c);
         //     j++;
         // }
-        int j = 0;
-        for(auto c : plane_vec){
-            writer.write(save_path + "/hulls/plane_" + std::to_string(j) +  ".pcd", *c);
-            j++;
-        }
+        // int j = 0;
+        // for(auto c : plane_vec){
+        //     std::cout << "plane size: " << c->size() << std::endl;
+        //     writer.write(save_path + "/hulls/plane_" + std::to_string(j) +  ".pcd", *c);
+        //     j++;
+        // }
 
 
 
@@ -270,14 +301,7 @@ public:
 
 
 
-        PointCloudT::Ptr outCloudEfficientPPR( new PointCloudT() );
-        planeEx.combinePlanes(plane_vec, outCloudEfficientPPR, true);
 
-        PointCloudT::Ptr outCloudEfficientPPRnc( new PointCloudT() );
-        planeEx.combinePlanes(plane_vec, outCloudEfficientPPRnc, false);
-
-        writer.write(save_path + "segmented.pcd", *outCloudEfficientPPR);
-        writer.write(save_path + "segmented_nc.pcd", *outCloudEfficientPPRnc);
 
     }
 

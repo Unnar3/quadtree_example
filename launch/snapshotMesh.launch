@@ -1,0 +1,5 @@
+<launch>
+	<node pkg="quad_tree_decimation_example" type="qtde_snapshotMesh" name="qtde_snapshotMesh" clear_params="true" output="screen">
+		<rosparam file="$(find quad_tree_decimation_example)/include/parameters/snapshotParameters.yaml" command="load"/>
+	</node>
+</launch>
